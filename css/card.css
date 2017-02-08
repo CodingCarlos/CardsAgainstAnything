@@ -1,0 +1,23 @@
+.card {
+	display: inline-block;
+    height: 300px;
+	margin: 4px;
+	text-decoration: none;
+    vertical-align: top;								
+    width: 200px;
+}
+	.card .mdl-card {
+		height: 100%;
+		width: 100%;
+		color: #000;
+	}
+		.card .mdl-card.question {
+			background-color: #000;
+			color: #fff;
+		}
+
+	.card .mdl-card .card-text  {
+		padding: 16px;
+		display: inline-block;
+		vertical-align: middle;
+	}

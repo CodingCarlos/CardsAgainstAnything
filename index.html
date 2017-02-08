@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="appCtrl as app">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+
+		<meta name="description" content="{{app.meta.description}}">
+    	<meta name="keywords" content="{{app.meta.keywords}}">
+
+		<!-- Topbar color when opened as web -->
+		<meta name="theme-color" content="#ff9800" />
+
+		<title ng-bind="app.title.title"></title>
+		
+		<!-- CSS MDL -->
+		<link rel="stylesheet" href="css/mdl/material.min.css">
+		<script src="js/mdl/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
+
+		<!-- CSS Swiper -->
+		<link rel="stylesheet" href="css/angular-ui-swiper.css" type="text/css" />
+
+		<!-- CSS Range Slider -->
+		<link rel="stylesheet" href="css/rzslider.min.css" type="text/css" />
+
+		<!-- CSS custom -->
+		<link rel="stylesheet" href="css/card.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/sidebar.css" type="text/css" />
+		<link rel="stylesheet" href="css/topbar.css" type="text/css" />
+		<link rel="stylesheet" href="css/search.css" type="text/css" />
+		
+		<!-- Add to homescreen @ iOS -->
+		<link rel="apple-touch-icon" href="icon/apple-icon.png">
+		<link rel="apple-touch-startup-image" href="/startup.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	
+	<body>
+
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<span class="mdl-layout-title">Cards Against Anything</span>
+
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
+
+					<!-- Right navigation -->
+					<topmenu></topmenu>
+
+				</div>
+			</header>
+
+			<!-- Mobile sidebar Navigation -->
+			<div class="mdl-layout__drawer">
+				<span ui-view="sidebar"></span>
+			</div>
+
+			<!-- Main content -->
+			<main class="mdl-layout__content">
+				
+				<div ui-view="content" class="page-content"></div>
+
+				<!--
+				<footer class="mdl-mini-footer">
+					<div class="mdl-mini-footer__left-section">
+						<div class="mdl-logo">Title</div>
+						<ul class="mdl-mini-footer__link-list">
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Privacy & Terms</a></li>
+						</ul>
+					</div>
+				</footer>
+				-->
+			</main>
+
+		</div>
+
+		<div ui-view="overview"></div>
+
+		<!-- jQuery -->
+		<!-- <script type="text/javascript" src="js/jquery/jquery-1.11.0.min.js"></script> -->
+
+		<!-- Angular -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+		<!-- <script type="text/javascript" src="js/angular-ui-swiper.min.js"></script> -->
+		<!-- <script type="text/javascript" src="js/rzslider.min.js"></script> -->
+
+		<!-- App -->
+		<script type="text/javascript" src="js/app.js"></script>
+
+		<!-- Services -->
+		<script type="text/javascript" src="services/api.js"></script>
+		<script type="text/javascript" src="services/card-list.js"></script>
+		<!-- <script type="text/javascript" src="services/login.js"></script> -->
+		<script type="text/javascript" src="services/meta.js"></script>
+		<script type="text/javascript" src="services/search.js"></script>
+		<script type="text/javascript" src="services/session.js"></script>
+		<script type="text/javascript" src="services/title.js"></script>
+
+		<!-- Directives -->
+		<script type="text/javascript" src="directives/card.js"></script>
+		<script type="text/javascript" src="directives/top-menu.js"></script>
+
+		<!-- Controllers -->
+		<script type="text/javascript" src="controllers/app.js"></script>
+		<!-- <script type="text/javascript" src="controllers/login.js"></script> -->
+		<script type="text/javascript" src="controllers/card-list.js"></script>
+		<script type="text/javascript" src="controllers/search.js"></script>
+	</body>
+</html>
