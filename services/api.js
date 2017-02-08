@@ -6,7 +6,7 @@
 	function apiService($http, session) {
 
 		var api = {
-			URL: 'http://api.whatever.com',
+			url: 'http://api.whatever.com',
 			token: null,
 			get: get,
 			post: post,

@@ -27,9 +27,6 @@
 		<!-- CSS custom -->
 		<link rel="stylesheet" href="css/card.css" type="text/css" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<link rel="stylesheet" href="css/sidebar.css" type="text/css" />
-		<link rel="stylesheet" href="css/topbar.css" type="text/css" />
-		<link rel="stylesheet" href="css/search.css" type="text/css" />
 		
 		<!-- Add to homescreen @ iOS -->
 		<link rel="apple-touch-icon" href="icon/apple-icon.png">
@@ -41,25 +38,7 @@
 	<body>
 
 		<!-- Always shows a header, even in smaller screens. -->
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<header class="mdl-layout__header">
-				<div class="mdl-layout__header-row">
-					<!-- Title -->
-					<span class="mdl-layout-title">Cards Against Anything</span>
-
-					<!-- Add spacer, to align navigation to the right -->
-					<div class="mdl-layout-spacer"></div>
-
-					<!-- Right navigation -->
-					<topmenu></topmenu>
-
-				</div>
-			</header>
-
-			<!-- Mobile sidebar Navigation -->
-			<div class="mdl-layout__drawer">
-				<span ui-view="sidebar"></span>
-			</div>
+		<div class="mdl-layout mdl-js-layout">
 
 			<!-- Main content -->
 			<main class="mdl-layout__content">
@@ -98,20 +77,20 @@
 		<!-- Services -->
 		<script type="text/javascript" src="services/api.js"></script>
 		<script type="text/javascript" src="services/card-list.js"></script>
+		<script type="text/javascript" src="services/room.js"></script>
 		<!-- <script type="text/javascript" src="services/login.js"></script> -->
 		<script type="text/javascript" src="services/meta.js"></script>
-		<script type="text/javascript" src="services/search.js"></script>
 		<script type="text/javascript" src="services/session.js"></script>
 		<script type="text/javascript" src="services/title.js"></script>
 
 		<!-- Directives -->
 		<script type="text/javascript" src="directives/card.js"></script>
-		<script type="text/javascript" src="directives/top-menu.js"></script>
 
 		<!-- Controllers -->
 		<script type="text/javascript" src="controllers/app.js"></script>
-		<!-- <script type="text/javascript" src="controllers/login.js"></script> -->
+		<script type="text/javascript" src="controllers/login.js"></script>
+		<script type="text/javascript" src="controllers/landing.js"></script>
+		<script type="text/javascript" src="controllers/room.js"></script>
 		<script type="text/javascript" src="controllers/card-list.js"></script>
-		<script type="text/javascript" src="controllers/search.js"></script>
 	</body>
 </html>

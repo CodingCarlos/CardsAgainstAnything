@@ -3,25 +3,20 @@
 	angular.module("app")
 		.controller("loginCtrl", loginController);
 	
-	function loginController($scope, login) {
+	function loginController($scope, $state, session, title, meta) {
 		var self = this;
 
 		// Params
-		self.user = '';
-		self.pass = '';
-		self.error = '';
+		self.name = '';
 
-		// Methods
-		self.service = login;
-		self.login = doLogin;
+		// Properties
 
-		// Hands on!!
-		update();
+		// Functions
+		self.login = function() {
+			session.set({name: self.name, uid: '123', pic: 'https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg', notifications: 0});
+			$state.go('list')
+		};
 
-		// Internal Functions
-		function doLogin() {
-			self.service.login(self.user, self.pass);
-		}
 	}
 
 	function update() {

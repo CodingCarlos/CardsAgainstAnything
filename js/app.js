@@ -5,21 +5,31 @@
 		.config(['$stateProvider', '$urlRouterProvider', 
 			function($stateProvider, $urlRouterProvider) {
 
-				$urlRouterProvider.otherwise('/');
+				$urlRouterProvider.otherwise('/landing');
 			
 				$stateProvider
-					.state('list', {
-						url: "/",
+					.state('landing', {
+						url: "/landing",
 						views: {
-							"sidebar": { templateUrl: "views/sidebar.html" },
-							"content": { templateUrl: "views/card-list.html" }
-						},
-						viewCache: true
+							"content": { templateUrl: "views/landing.html" }
+						}
 					})
-					.state('search', {
-						url: "/search",
+					.state('room', {
+						url: "/room",
 						views: {
-							"overview": { templateUrl: "views/search.html" }
+							"content": { templateUrl: "views/room.html" }
+						}
+					})
+					.state('login', {
+						url: "/login",
+						views: {
+							"content": { templateUrl: "views/login.html" }
+						}
+					})
+					.state('list', {
+						url: "/list",
+						views: {
+							"content": { templateUrl: "views/card-list.html" }
 						}
 					});
 

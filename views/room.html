@@ -1,0 +1,9 @@
+<div ng-controller="roomCtrl as cardList">
+	<h1>Jugadores actuales</h1>
+	<div ng-repeat="player in cardList.service.data.players">
+		<img ng-src="{{player.pic}}" />
+		<h3>{{player.name}}</h3>
+	</div>
+
+	<div class="mdl-button" ui-sref="login">Join</div>
+</div>
